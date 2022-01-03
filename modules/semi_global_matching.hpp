@@ -14,7 +14,10 @@ class SGM
     
     public:
         SGM(int p_1, int p_2);
-        cv::Mat get_disp();
-        void set_images(cv::Mat& left, cv::Mat& right);
         ~SGM();
+        
+        cv::Mat get_disp();
+        
+        void set_images(cv::Mat &left, cv::Mat &right);
+        void census_transform(cv::Mat &img, cv::Mat &census_img); 
 };

@@ -15,12 +15,13 @@ cv::Mat SGM::get_disp()
     return disp;
 }
 
-void SGM::set_images(cv::Mat& left, cv::Mat& right)
+void SGM::set_images(cv::Mat &left, cv::Mat &right)
 {
     img_L = left;
     img_R = right;
 }
 
+void SGM::census_transform(cv)
 SGM::~SGM()
 {
 }
