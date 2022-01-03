@@ -10,6 +10,12 @@ int main(int argc, char* argv[])
     cv::Mat img_L = cv::imread(img_L_path, cv::IMREAD_UNCHANGED);
     cv::Mat img_R = cv::imread(img_R_path, cv::IMREAD_UNCHANGED);
 
+    int p1 = 0;
+    int p2 = 0;
+    SGM sgm(p1, p2);
+
+    sgm.set_images(img_L, img_R);
+
     cv::imwrite("left.png", img_L);
     cv::imwrite("right.png", img_R);
 

@@ -8,9 +8,13 @@ class SGM
         cv::Mat img_L;
         cv::Mat img_R;
         cv::Mat disp;
+
+        int p1;
+        int p2;
     
     public:
+        SGM(int p_1, int p_2);
         cv::Mat get_disp();
-        void set_images(cv::Mat left, cv::Mat right);
-    
+        void set_images(cv::Mat& left, cv::Mat& right);
+        ~SGM();
 };
