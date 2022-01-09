@@ -10,18 +10,30 @@ SGM::SGM(int p_1, int p_2)
     std::cout << "p2 : " << p2 << std::endl;
 }
 
-cv::Mat SGM::get_disp()
+cv::Mat SGM::getDisp()
 {
     return disp;
 }
 
-void SGM::set_images(cv::Mat &left, cv::Mat &right)
+void SGM::setImages(cv::Mat &left, cv::Mat &right)
 {
     img_L = left;
     img_R = right;
 }
 
-void SGM::census_transform(cv)
+cv::Mat SGM::transCensus(cv::Mat &img)
+{
+    return img;
+}
+
+cv::Mat SGM::calcDisparity(cv::Mat &img_l, cv::Mat &img_r)
+{
+    cv::Mat img_l_census = transCensus(img_l);
+    cv::Mat img_r_census = transCensus(img_r); 
+
+    return img_l;
+}
+
 SGM::~SGM()
 {
 }

@@ -16,8 +16,9 @@ class SGM
         SGM(int p_1, int p_2);
         ~SGM();
         
-        cv::Mat get_disp();
+        cv::Mat getDisp();
         
-        void set_images(cv::Mat &left, cv::Mat &right);
-        void census_transform(cv::Mat &img, cv::Mat &census_img); 
+        void setImages(cv::Mat &left, cv::Mat &right);
+        cv::Mat transCensus(cv::Mat &img); 
+        cv::Mat calcDisparity(cv::Mat &img_l, cv::Mat &img_r);
 };

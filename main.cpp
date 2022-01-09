@@ -14,7 +14,9 @@ int main(int argc, char* argv[])
     int p2 = 0;
     SGM sgm(p1, p2);
 
-    sgm.set_images(img_L, img_R);
+    sgm.setImages(img_L, img_R);
+
+    cv::Mat img_Disp = sgm.calcDisparity(img_L, img_R);
 
     cv::imwrite("left.png", img_L);
     cv::imwrite("right.png", img_R);
